@@ -3,21 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gritch | 違和感を、突破口に。</title>
-  <meta name="description" content="Gritchは、AI、空間、プロダクトブランドを通して、まだ見えていない可能性を形にします。">
+  <title>Gritch（グリッチ）| AI導入支援・法人研修 / 内装設計 / 雑貨ブランドMEGURID</title>
+  <meta name="description" content="Gritch（グリッチ）は、中小建築企業向けのAI導入支援・法人研修、アプリ開発、内装設計・空間プロデュース、雑貨ブランドMEGURIDを手がけます。違和感を突破口に、実装で現場を変える。">
+  <link rel="canonical" href="https://gritch.net/">
+  <meta property="og:site_name" content="Gritch">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gritch.net/">
+  <meta property="og:title" content="Gritch（グリッチ）| AI導入支援・法人研修 / 内装設計 / 雑貨ブランドMEGURID">
+  <meta property="og:description" content="Gritch（グリッチ）は、中小建築企業向けのAI導入支援・法人研修、アプリ開発、内装設計・空間プロデュース、雑貨ブランドMEGURIDを手がけます。違和感を突破口に、実装で現場を変える。">
+  <meta property="og:image" content="https://gritch.net/assets/images/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#020202">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="assets/images/hero-city-glitch.jpg" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gritch",
+    "alternateName": "グリッチ",
+    "url": "https://gritch.net/",
+    "logo": "https://gritch.net/apple-touch-icon.png",
+    "email": "info@gritch.net",
+    "description": "中小建築企業向けのAI導入支援・法人研修、アプリ開発、内装設計・空間プロデュース、雑貨ブランドMEGURIDを手がける。",
+    "founder": { "@type": "Person", "name": "鈴木海人" },
+    "sameAs": [
+      "https://ai.gritch.net/",
+      "https://megurid.store.gritch.net/"
+    ]
+  }
+  </script>
   <style>
     :root {
       --bg: #020202;
       --bg-2: #070707;
-      --line: rgba(255, 255, 255, 0.14);
-      --line-strong: rgba(255, 255, 255, 0.26);
       --text: #f6f6f6;
-      --muted: rgba(246, 246, 246, 0.72);
-      --dim: rgba(246, 246, 246, 0.44);
       --red: #ff2b2b;
       --cyan: #7df5ff;
-      --green: #69b85c;
       --max: 1240px;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace;
     }
 
     * {
@@ -26,6 +55,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 6rem;
       background: var(--bg);
     }
 
@@ -37,7 +67,7 @@
         radial-gradient(circle at 74% 16%, rgba(255, 255, 255, 0.08), transparent 28rem),
         radial-gradient(circle at 12% 80%, rgba(255, 43, 43, 0.09), transparent 24rem),
         var(--bg);
-      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", "Meiryo", system-ui, sans-serif;
       line-height: 1.8;
     }
 
@@ -57,7 +87,7 @@
         ),
         linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.035), transparent);
       mix-blend-mode: screen;
-      opacity: 0.42;
+      opacity: 0.28;
     }
 
     body::after {
@@ -70,7 +100,7 @@
         linear-gradient(90deg, transparent 0 18%, rgba(255, 43, 43, 0.08) 18.2%, transparent 18.6%),
         linear-gradient(0deg, transparent 0 38%, rgba(125, 245, 255, 0.07) 38.1%, transparent 38.4%),
         linear-gradient(90deg, transparent 0 68%, rgba(255, 255, 255, 0.05) 68.1%, transparent 68.3%);
-      opacity: 0.34;
+      opacity: 0.22;
       animation: noiseShift 6s steps(2, end) infinite;
     }
 
@@ -125,15 +155,16 @@
     .nav {
       display: flex;
       align-items: center;
-      gap: 2.2rem;
-      font-family: "Courier New", monospace;
-      font-size: 0.72rem;
+      gap: 1.4rem;
+      font-family: var(--mono);
+      font-size: 0.8rem;
       font-weight: 700;
       line-height: 1;
     }
 
     .nav a {
       position: relative;
+      padding: 0.85rem 0.4rem;
       color: rgba(255, 255, 255, 0.78);
     }
 
@@ -149,17 +180,97 @@
     .nav a:first-child::after {
       content: "";
       position: absolute;
-      left: 0;
-      bottom: -0.85rem;
+      left: 0.4rem;
+      bottom: 0.1rem;
       width: 1.1rem;
       height: 1px;
       background: var(--red);
     }
 
     .nav .contact-link {
-      padding: 0.85rem 1.35rem;
+      padding: 0.95rem 1.4rem;
       border: 1px solid rgba(255, 255, 255, 0.52);
       color: #fff;
+    }
+
+    .nav-toggle {
+      display: none;
+      position: relative;
+      width: 2.9rem;
+      height: 2.9rem;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    .nav-toggle::before,
+    .nav-toggle::after {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      right: 0.75rem;
+      height: 2px;
+      background: #fff;
+      transition: transform 0.25s ease, top 0.25s ease;
+    }
+
+    .nav-toggle::before {
+      top: 1.05rem;
+    }
+
+    .nav-toggle::after {
+      top: 1.7rem;
+    }
+
+    .nav-toggle[aria-expanded="true"]::before {
+      top: 1.4rem;
+      transform: rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"]::after {
+      top: 1.4rem;
+      transform: rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 25;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(2, 2, 2, 0.96);
+    }
+
+    .mobile-menu.is-open {
+      display: flex;
+    }
+
+    @media (min-width: 981px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 0.6rem;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.9rem 2rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus-visible {
+      color: var(--red);
     }
 
     .section {
@@ -227,6 +338,7 @@
     .hero-logo::before,
     .hero-logo::after {
       content: attr(data-text);
+      content: attr(data-text) / "";
       position: absolute;
       inset: 0;
       pointer-events: none;
@@ -274,13 +386,22 @@
       line-height: 2.1;
     }
 
+    .hero-domains {
+      margin: 1.4rem 0 0;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
     .side-vertical {
       position: absolute;
       right: 3vw;
       top: 50%;
       transform: translateY(-50%);
       writing-mode: vertical-rl;
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.8rem;
       font-weight: 700;
       color: rgba(255, 255, 255, 0.86);
@@ -298,7 +419,7 @@
       bottom: 2.2rem;
       display: grid;
       gap: 0.7rem;
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.72rem;
       font-weight: 700;
       color: rgba(255, 255, 255, 0.76);
@@ -387,7 +508,7 @@
       padding: 0.7rem 1rem;
       border: 1px solid rgba(255, 255, 255, 0.46);
       background: rgba(0, 0, 0, 0.35);
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 1rem;
       font-weight: 900;
       line-height: 1.1;
@@ -438,12 +559,12 @@
       padding: 5.8rem 0 6.8rem;
       background:
         linear-gradient(rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.9)),
-        url("assets/images/hero-city-glitch.png") center / cover fixed;
+        url("assets/images/hero-city-glitch.jpg") center / cover;
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: minmax(14rem, 0.78fr) repeat(3, minmax(14rem, 1fr));
+      grid-template-columns: minmax(12rem, 0.78fr) repeat(3, minmax(12rem, 1fr));
       gap: 1.5rem;
       align-items: stretch;
     }
@@ -477,7 +598,7 @@
       min-height: 3rem;
       padding: 0.85rem 1.2rem;
       border: 1px solid rgba(255, 255, 255, 0.42);
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.78rem;
       font-weight: 900;
       color: #fff;
@@ -500,6 +621,7 @@
 
     .service-card::before {
       content: attr(data-no);
+      content: attr(data-no) / "";
       position: absolute;
       top: 1.2rem;
       left: 1.25rem;
@@ -520,16 +642,8 @@
     }
 
     .service-card.product-card img {
-      filter: grayscale(0.68) contrast(1.1) brightness(0.78) saturate(0.64);
-      opacity: 0.82;
-    }
-
-    .service-card.logo-card img {
-      object-fit: contain;
-      padding: 2.15rem;
-      background: #000;
-      filter: contrast(1.08) brightness(1.04);
-      opacity: 0.94;
+      filter: grayscale(0.3) contrast(1.08) brightness(0.9);
+      opacity: 0.88;
     }
 
     .service-card-body {
@@ -538,7 +652,7 @@
 
     .service-label {
       margin: 0 0 0.75rem;
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.78rem;
       font-weight: 900;
       color: #fff;
@@ -558,7 +672,7 @@
     }
 
     .text-link {
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.78rem;
       font-weight: 900;
     }
@@ -577,7 +691,7 @@
 
     .mono-kicker {
       margin: 0 0 1.15rem;
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.88rem;
       font-weight: 900;
       color: var(--red);
@@ -600,7 +714,7 @@
     }
 
     .trust-list strong {
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       color: rgba(255, 255, 255, 0.92);
     }
 
@@ -669,6 +783,7 @@
 
     .glitch-label::before {
       content: attr(data-text);
+      content: attr(data-text) / "";
       position: absolute;
       inset: 0;
       color: var(--red);
@@ -700,7 +815,7 @@
       padding: 5rem 0;
       background:
         linear-gradient(180deg, rgba(5, 5, 5, 0.96), #000),
-        url("assets/images/eye-system-glitch.png") center / cover;
+        url("assets/images/eye-system-glitch.jpg") center / cover;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
@@ -728,7 +843,7 @@
 
     .company-table th {
       width: 10rem;
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       color: rgba(255, 255, 255, 0.56);
     }
 
@@ -739,10 +854,10 @@
       gap: 2rem;
       width: min(var(--max), calc(100% - 7vw));
       margin: 0 auto;
-      padding: 2.1rem 0;
+      padding: 3.5rem 0;
     }
 
-    .contact-band p {
+    .contact-band h2 {
       margin: 0;
       font-size: 1.1rem;
       font-weight: 800;
@@ -757,7 +872,7 @@
     }
 
     .contact-email {
-      font-family: "Courier New", monospace;
+      font-family: var(--mono);
       font-size: 0.92rem;
       font-weight: 900;
       color: rgba(255, 255, 255, 0.86);
@@ -769,9 +884,9 @@
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      color: rgba(255, 255, 255, 0.48);
-      font-family: "Courier New", monospace;
-      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.62);
+      font-family: var(--mono);
+      font-size: 0.8rem;
     }
 
     @keyframes noiseShift {
@@ -805,15 +920,20 @@
 
     @media (max-width: 980px) {
       .site-header {
+        gap: 1rem;
         padding: 1.1rem 1.3rem;
       }
 
       .nav {
-        gap: 1rem;
+        gap: 0.7rem;
       }
 
-      .nav a:not(.contact-link):nth-child(n+3) {
+      .nav a:not(.contact-link) {
         display: none;
+      }
+
+      .nav-toggle {
+        display: block;
       }
 
       .hero-content {
@@ -890,9 +1010,13 @@
     }
 
     @media (max-width: 620px) {
+      html {
+        scroll-padding-top: 5rem;
+      }
+
       .brand {
         font-size: 1.55rem;
-        min-width: 6.5rem;
+        min-width: auto;
       }
 
       .brand::after {
@@ -900,15 +1024,11 @@
       }
 
       .nav {
-        font-size: 0.68rem;
-      }
-
-      .nav a:not(.contact-link) {
-        display: none;
+        font-size: 0.78rem;
       }
 
       .nav .contact-link {
-        padding: 0.7rem 0.9rem;
+        padding: 0.8rem 0.9rem;
       }
 
       .hero {
@@ -946,6 +1066,10 @@
         margin-top: 1.6rem;
         font-size: 0.86rem;
         line-height: 1.95;
+      }
+
+      .hero-domains {
+        font-size: 0.72rem;
       }
 
       .scroll-mark {
@@ -1097,15 +1221,10 @@
       opacity: 1;
     }
 
-    .service-card.logo-card:hover img,
-    .service-card.logo-card:focus-within img {
-      transform: scale(1.02);
-    }
-
     .text-link {
       position: relative;
       display: inline-block;
-      padding-bottom: 0.35rem;
+      padding: 0.6rem 0 0.35rem;
       transition: color 0.25s ease, transform 0.25s ease;
     }
 
@@ -1137,7 +1256,7 @@
       transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .work-item:hover {
+    .work-item.has-link:hover {
       transform: translateY(-4px);
       background: rgba(12, 12, 12, 0.92);
       box-shadow: inset 0 0 0 1px rgba(255, 43, 43, 0.4);
@@ -1173,6 +1292,12 @@
       transform: translateY(0);
     }
 
+    .reveal:focus-within {
+      opacity: 1;
+      transform: none;
+      transition-delay: 0ms !important;
+    }
+
     @media (max-width: 680px) {
       .br-pc {
         display: none;
@@ -1185,6 +1310,8 @@
       *::after {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0ms !important;
         scroll-behavior: auto !important;
       }
     }
@@ -1192,21 +1319,33 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Gritch top">Grit</a>
-    <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="#top">Gritch</a>
+    <nav class="nav" aria-label="メインナビゲーション">
       <a href="#top">TOP</a>
       <a href="#concept">CONCEPT</a>
       <a href="#service">SERVICE</a>
       <a href="#works">WORKS</a>
       <a href="#company">COMPANY</a>
       <a class="contact-link" href="#contact">CONTACT</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"></button>
     </nav>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="モバイルナビゲーション">
+      <a href="#top">TOP</a>
+      <a href="#concept">CONCEPT</a>
+      <a href="#service">SERVICE</a>
+      <a href="#works">WORKS</a>
+      <a href="#company">COMPANY</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </div>
 
   <main>
     <section class="section hero" id="top" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true">
-        <img src="assets/images/hero-city-glitch.png" alt="">
+        <img src="assets/images/hero-city-glitch.jpg" alt="" width="1823" height="863" fetchpriority="high">
       </div>
       <div class="hero-content">
         <h1 class="hero-logo" id="hero-title" data-text="Gritch">Gritch</h1>
@@ -1216,9 +1355,10 @@
           AI、空間、プロダクトブランドを通して、<br>
           まだ見えていない可能性を形にする。
         </p>
+        <p class="hero-domains">AI導入支援・法人研修 / アプリ開発 / 内装設計・空間プロデュース / 雑貨ブランド MEGURID</p>
       </div>
-      <p class="side-vertical">WE ARE GLITCH. NOT <strong>CHEAT</strong>.</p>
-      <span class="scroll-mark">SCROLL</span>
+      <p class="side-vertical" aria-hidden="true">TURN GLITCHES INTO <strong>BREAKTHROUGHS</strong>.</p>
+      <span class="scroll-mark" aria-hidden="true">SCROLL</span>
     </section>
 
     <section class="section split-section" id="concept" aria-labelledby="concept-title">
@@ -1234,15 +1374,15 @@
         </div>
       </div>
       <div class="visual-panel">
-        <img src="assets/images/eye-system-glitch.png" alt="グリッチノイズが走る眼のビジュアル">
-        <span class="caption-box">WE SEE WHAT YOU CAN'T.</span>
+        <img src="assets/images/eye-system-glitch.jpg" alt="グリッチノイズが走る眼のビジュアル" width="1600" height="800" loading="lazy" decoding="async">
+        <span class="caption-box" aria-hidden="true">WE SEE WHAT YOU CAN'T.</span>
       </div>
     </section>
 
     <section class="section history-section" aria-labelledby="history-title">
       <div class="history-visual">
-        <img src="assets/images/history-sprout-glitch.png" alt="割れた球体から芽が出ているビジュアル">
-        <span class="caption-box">A TEMPORARY GLITCH<br>THAT BECOMES HISTORY.</span>
+        <img src="assets/images/history-sprout-glitch.jpg" alt="割れた球体から芽が出ているビジュアル" width="1600" height="800" loading="lazy" decoding="async">
+        <span class="caption-box" aria-hidden="true">A TEMPORARY GLITCH<br>THAT BECOMES HISTORY.</span>
       </div>
       <div class="history-copy">
         <div class="copy-stack">
@@ -1263,39 +1403,40 @@
     <section class="section services" id="service" aria-labelledby="service-title">
       <div class="section-inner service-grid">
         <div class="service-intro">
-          <h2 class="ghost-heading" id="service-title">OUR<br>SERVICE</h2>
+          <h2 class="mono-kicker" id="service-title">OUR SERVICES</h2>
+          <div class="ghost-heading" aria-hidden="true">OUR<br>SERVICES</div>
           <p>実装で、現場と体験を変える。</p>
           <p>Gritchは、AI、空間、プロダクトブランドの領域で、違和感を新しい価値に変えていく。</p>
-          <a class="outline-button" href="#contact">VIEW ALL SERVICES --</a>
+          <a class="outline-button" href="#contact">CONTACT US --</a>
         </div>
 
         <article class="service-card" data-no="01">
-          <img src="assets/images/service-ai-consulting.png" alt="AIコンサルティングの抽象ビジュアル">
+          <img src="assets/images/service-ai-consulting.jpg" alt="AIコンサルティングの抽象ビジュアル" width="960" height="540" loading="lazy" decoding="async">
           <div class="service-card-body">
             <p class="service-label">AI CONSULTING</p>
             <h3>AI導入・業務改善</h3>
-            <p>現場の課題を整理し、実際に使えるAIの仕組みとして実装する。</p>
-            <a class="text-link" href="http://ai.gritch.net/" aria-label="AI保守顧問のLPを見る">VIEW MORE --</a>
+            <p>現場の課題を整理し、実際に使えるAIの仕組みとして実装する。法人研修・AI導入プログラムにも対応。</p>
+            <a class="text-link" href="https://ai.gritch.net/" aria-label="VIEW MORE - AI導入・業務改善">VIEW MORE --</a>
           </div>
         </article>
 
         <article class="service-card" data-no="02">
-          <img src="assets/images/service-architecture-space.png" alt="建築と空間プロデュースの暗いビジュアル">
+          <img src="assets/images/service-architecture-space.jpg" alt="建築と空間プロデュースの暗いビジュアル" width="960" height="640" loading="lazy" decoding="async">
           <div class="service-card-body">
             <p class="service-label">INTERIOR / SPACE</p>
             <h3>内装設計・空間プロデュース</h3>
             <p>人の感情に残る空間を、設計と体験の両面からつくる。</p>
-            <a class="text-link" href="#contact">VIEW MORE --</a>
+            <a class="text-link" href="#contact">CONTACT --</a>
           </div>
         </article>
 
-        <article class="service-card product-card logo-card" data-no="03">
-          <img src="assets/images/megurid-logo-cropped.png" alt="MEGURIDのロゴ">
+        <article class="service-card product-card" data-no="03">
+          <img src="assets/images/service-megurid-960.jpg" alt="MEGURIDの陶器プロダクト" width="960" height="960" loading="lazy" decoding="async">
           <div class="service-card-body">
             <p class="service-label">MEGURID</p>
             <h3>雑貨ブランド運営</h3>
             <p>暮らしの中にある余白を、器・香り・佇まいのあるプロダクトとして形にする。</p>
-            <a class="text-link" href="https://megurid.store.gritch.net/" aria-label="MEGURIDのホームページを見る">VIEW MORE --</a>
+            <a class="text-link" href="https://megurid.store.gritch.net/" aria-label="VIEW MORE - MEGURID">VIEW MORE --</a>
           </div>
         </article>
       </div>
@@ -1304,7 +1445,7 @@
     <section class="section trust" aria-labelledby="trust-title">
       <div class="section-inner trust-layout">
         <div>
-          <p class="mono-kicker">NO CHEAT POLICY</p>
+          <p class="mono-kicker">OUR PRINCIPLES</p>
           <h2 class="section-title" id="trust-title">ズルではなく、<br>実装で超える。</h2>
           <p class="section-copy">
             Gritchは、近道のために信頼を削らない。<br class="br-pc">現場を見て、構造を読み、正攻法で突破口をつくる。
@@ -1332,21 +1473,23 @@
         <p class="mono-kicker">WORKS / PROTOTYPES</p>
         <h2 class="section-title" id="works-title">言葉より、<br>実装で示す。</h2>
         <div class="works-row">
-          <div class="work-item">
+          <div class="work-item has-link">
             <h3>MEGURID</h3>
             <p>暮らしの道具を企画・制作・販売する雑貨ブランド。</p>
+            <a class="text-link" href="https://megurid.store.gritch.net/">VIEW STORE --</a>
           </div>
           <div class="work-item">
             <h3>きおくポケット</h3>
             <p>LINE上の業務連絡を案件単位で記憶し、毎朝の判断材料へ変えるAI秘書。</p>
           </div>
           <div class="work-item">
-            <h3>メール見守りtAI</h3>
+            <h3>メール見守りtAI（みまもりたい）</h3>
             <p>Gmailとカレンダーを見守り、未読・要返信・予定を朝夕で整理するメール自動化AI。</p>
           </div>
-          <div class="work-item">
+          <div class="work-item has-link">
             <h3>AI保守・伴走</h3>
             <p>現場に合うAI活用を、一緒に作りながら定着させる支援。</p>
+            <a class="text-link" href="https://ai.gritch.net/">VIEW MORE --</a>
           </div>
         </div>
       </div>
@@ -1375,7 +1518,8 @@
         <div>
           <p class="mono-kicker">COMPANY</p>
           <h2 class="section-title" id="company-title">Gritch</h2>
-          <p class="section-copy">AI開発、アプリ開発、内装設計、MEGURIDを横断し、<br class="br-pc">事業や体験の中に新しい突破口をつくる。</p>
+          <p class="section-copy">AI導入支援・法人研修、アプリ開発、内装設計・空間プロデュース、<br class="br-pc">雑貨ブランドMEGURIDを横断し、事業や体験の中に新しい突破口をつくる。</p>
+          <p class="section-copy">代表は建築設計・施工管理の実務経験を持ち、<br class="br-pc">建築×AIの実装を強みとする。</p>
         </div>
         <table class="company-table">
           <tbody>
@@ -1388,8 +1532,20 @@
               <td>鈴木海人</td>
             </tr>
             <tr>
+              <th>ESTABLISHED</th>
+              <td>2026年5月</td>
+            </tr>
+            <tr>
+              <th>LOCATION</th>
+              <td>東京都</td>
+            </tr>
+            <tr>
               <th>DOMAIN</th>
-              <td>AI導入支援 / アプリ開発 / 内装設計・空間プロデュース / MEGURID</td>
+              <td>AI導入支援・法人研修 / アプリ開発 / 内装設計・空間プロデュース / 雑貨ブランド MEGURID</td>
+            </tr>
+            <tr>
+              <th>CONTACT</th>
+              <td><a href="mailto:info@gritch.net?subject=お問い合わせ（Gritch HP）">info@gritch.net</a></td>
             </tr>
             <tr>
               <th>VALUE</th>
@@ -1400,20 +1556,20 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="contact-band">
-        <p>違和感を、突破口に。</p>
+        <h2 id="contact-title">違和感を、突破口に。</h2>
         <div class="contact-actions">
-          <a class="contact-email" href="mailto:info@gritch.net">info@gritch.net</a>
-          <a class="outline-button" href="mailto:info@gritch.net">CONTACT --</a>
+          <a class="contact-email" href="mailto:info@gritch.net?subject=お問い合わせ（Gritch HP）">info@gritch.net</a>
+          <a class="outline-button" href="mailto:info@gritch.net?subject=お問い合わせ（Gritch HP）">CONTACT --</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>GRITCH</span>
-    <span>WE ARE GLITCH. NOT CHEAT.</span>
+    <span>&copy; 2026 GRITCH</span>
+    <span>TURN GLITCHES INTO BREAKTHROUGHS.</span>
   </footer>
 
   <script>
@@ -1423,11 +1579,22 @@
       var targets = document.querySelectorAll(
         ".copy-stack, .service-intro, .service-card, .trust-layout > div, .trust-list li, .work-item, .manifesto-layout > *, .company-layout > *"
       );
+      function cleanup(el) {
+        if (!el.classList.contains("is-visible")) return;
+        el.classList.remove("reveal", "is-visible");
+        el.style.transitionDelay = "";
+      }
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
+            var el = entry.target;
+            el.classList.add("is-visible");
+            io.unobserve(el);
+            el.addEventListener("transitionend", function handler() {
+              el.removeEventListener("transitionend", handler);
+              cleanup(el);
+            });
+            setTimeout(function () { cleanup(el); }, 1300);
           }
         });
       }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
@@ -1439,6 +1606,36 @@
         el.style.transitionDelay = Math.min(idx * 90, 360) + "ms";
         io.observe(el);
       });
+    })();
+
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var menu = document.getElementById("mobile-menu");
+      if (!toggle || !menu) return;
+      function setOpen(open) {
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+        menu.classList.toggle("is-open", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+      toggle.addEventListener("click", function () {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      menu.addEventListener("click", function (event) {
+        if (event.target.closest("a") || event.target === menu) setOpen(false);
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && menu.classList.contains("is-open")) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      var desktop = window.matchMedia("(min-width: 981px)");
+      var onDesktop = function (mq) {
+        if (mq.matches && menu.classList.contains("is-open")) setOpen(false);
+      };
+      if (desktop.addEventListener) desktop.addEventListener("change", onDesktop);
+      else if (desktop.addListener) desktop.addListener(onDesktop);
     })();
   </script>
 </body>
